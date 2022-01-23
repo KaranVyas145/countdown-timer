@@ -1,0 +1,58 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+.container{
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+    z-index: 2;
+    color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    text-shadow:5px 5px 15px black;
+}
+
+.container::before{
+    content: "";
+    position: absolute;
+    background-image: url(images/mainBg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color:rgb(61, 44, 29);
+    mix-blend-mode: overlay;
+    z-index: 0;
+}
+
+.countdown-container{
+    display: flex;
+    text-align: center;
+}
+
+.bigtext{
+    font-size: 6rem;
+    line-height: 1;
+    margin: 0 3rem;
+}
+
