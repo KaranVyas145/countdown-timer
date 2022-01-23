@@ -12,10 +12,13 @@ function countdown(){
     const minutes= Math.floor(totalSeconds/60)%60;
     const seconds= Math.floor(totalSeconds)%60;
     daysel.innerHTML=days;
-    hoursel.innerHTML=hours;
-    minutesel.innerHTML=minutes;
-    secondsel.innerHTML=seconds;
+    hoursel.innerHTML=formatTIme(hours);
+    minutesel.innerHTML=formatTIme(minutes);
+    secondsel.innerHTML=formatTIme(seconds);
 }
 
 setInterval((countdown), 1000);
 
+function formatTIme(time){
+    return time< 10 ? (`0${time}`):time;
+}
